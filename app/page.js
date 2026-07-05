@@ -12,7 +12,7 @@ export default function PortalProperti() {
       {/* Navbar */}
       <header className="sticky top-0 z-40 border-b border-slatep/10 bg-kabut/90 backdrop-blur-xl">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5 sm:px-6">
-          <a href="#" className="flex items-center gap-2 text-lg font-extrabold tracking-tight">
+          <a href="/" className="flex items-center gap-2 text-lg font-extrabold tracking-tight">
             <span className="grid h-9 w-9 place-items-center rounded-xl bg-slatep text-zamrud"><Home size={17} /></span>
             PortalProperti
           </a>
