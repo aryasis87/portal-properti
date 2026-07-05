@@ -1,35 +1,43 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-display: var(--font-manrope), system-ui, sans-serif;
+  --font-sans: var(--font-manrope), system-ui, sans-serif;
+
+  --color-slatep: #0e1729;
+  --color-kabut: #eef1f6;
+  --color-zamrud: #10b981;
+  --color-mutedp: #64748b;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background-color: #ffffff;
-  color: #1e293b; /* Tailwind slate-800, gelap tapi adem */
-  font-family: 'Inter', sans-serif;
-  overscroll-behavior-y: contain;
+  background-color: var(--color-kabut);
+  color: var(--color-slatep);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
 }
 
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
+h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.03em; }
+
+/* Kartu berbentuk rumah (atap segitiga) */
+.rumah { clip-path: polygon(50% 0, 100% 14%, 100% 100%, 0 100%, 0 14%); }
+.rumah-wrap { filter: drop-shadow(0 16px 30px rgba(14, 23, 41, 0.18)); transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), filter 0.3s; }
+.group:hover .rumah-wrap { transform: translateY(-8px); filter: drop-shadow(0 26px 40px rgba(16, 185, 129, 0.28)); }
+
+/* Cerobong asap kecil */
+.cerobong { position: absolute; top: 1%; right: 22%; width: 10px; height: 9%; background: var(--color-slatep); border-radius: 2px 2px 0 0; }
+
+/* Grid denah */
+.blueprint {
+  background-image:
+    linear-gradient(rgba(14, 23, 41, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14, 23, 41, 0.05) 1px, transparent 1px);
+  background-size: 34px 34px;
 }
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
+
+@keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+.rise { animation: rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+:focus-visible { outline: 3px solid var(--color-zamrud); outline-offset: 3px; border-radius: 10px; }

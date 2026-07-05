@@ -1,19 +1,18 @@
 import './globals.css';
-// import Header from '../components/Header';
-// import Footer from '../components/Footer';
+import { Manrope } from 'next/font/google';
+
+const manrope = Manrope({ subsets: ['latin'], variable: '--font-manrope', weight: ['400', '600', '800'] });
 
 export const metadata = {
-  title: 'Link in Bio Templates by Sanzy',
-  description: 'Koleksi template link in bio premium untuk personal branding dan bisnis.',
+  title: 'PortalProperti — Empat Wajah Marketplace Properti',
+  description: 'PortalProperti: 4 template marketplace properti dengan kepribadian berbeda — editorial, proptech, luxury, dan hangat.',
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="id">
-      <body className="bg-white text-gray-900">
-        {/* <Header /> */}
+      <body className={`${manrope.variable} antialiased`}>
         <main>{children}</main>
-        {/* <Footer /> */}
       </body>
     </html>
   );

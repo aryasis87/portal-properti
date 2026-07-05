@@ -1,98 +1,26 @@
 export const templates = [
   {
-    url: "https://personalbranding1.vercel.app",
-    name: "Clean",
-    description: "Desain bersih dan elegan untuk profesional kreatif dengan tata letak simpel",
-    image: "/images/pb1.png",
-    category: "Profesional",
-    tags: ["Minimal", "Elegan", "Portfolio"]
+    name: 'Propertia', gaya: 'Boutique Editorial',
+    description: 'Serif Fraunces, lengkung katedral, dan nuansa emerald-emas — marketplace rasa butik.',
+    image: '/images/p1.png', url: '#', warna: '#0f3d2e',
+    fitur: ['Hero editorial asimetris', 'Filter lengkap + detail listing', 'Peta & kontak agen WhatsApp'],
   },
   {
-    url: "https://personalbranding2.vercel.app",
-    name: "Agencia",
-    description: "Tampilkan karya Anda dengan galeri visual yang memukau dan interaktif",
-    image: "/images/pb2.png",
-    category: "Kreatif",
-    tags: ["Galeri", "Interaktif", "Portfolio"]
+    name: 'Homigo', gaya: 'PropTech Modern',
+    description: 'Biru elektrik, search bertab, dan kalkulator KPR interaktif — untuk generasi digital.',
+    image: '/images/p2.png', url: '#', warna: '#2563eb',
+    fitur: ['Search bertab Beli/Sewa/Baru', 'Kalkulator KPR slider', 'Rekomendasi ber-toggle'],
   },
   {
-    url: "https://personalbranding3.vercel.app",
-    name: "Playfull",
-    description: "Template profesional untuk bisnis dengan penekanan pada konversi tinggi",
-    image: "/images/pb3.png",
-    category: "Bisnis",
-    tags: ["Perusahaan", "Konversi", "Profesional"]
+    name: 'Lumora', gaya: 'Luxury Gallery',
+    description: 'Gelap, emas, dan sinematik — hero slideshow layar penuh dengan navbar yang berubah jadi pencarian.',
+    image: '/images/p3.png', url: '#', warna: '#c6a25c',
+    fitur: ['Slideshow properti full-screen', 'Navbar morph jadi search', 'Layanan kunjungan privat'],
   },
   {
-    url: "https://personalbranding4.vercel.app",
-    name: "Futuristic",
-    description: "Template energik untuk influencer dengan integrasi media sosial lengkap",
-    image: "/images/pb4.png",
-    category: "Media Sosial",
-    tags: ["Sosial Media", "Viral", "Personal Branding"]
+    name: 'Beranda', gaya: 'Hangat & Ramah',
+    description: 'Terracotta lembut dan pencarian berdasarkan suasana — cari rumah dengan hati.',
+    image: '/images/p4.png', url: '#', warna: '#c75d3c',
+    fitur: ['Cari berdasarkan suasana hidup', 'Sorotan kawasan per kota', 'Nuansa keluarga yang membumi'],
   },
-  {
-    url: "https://personalbranding5.vercel.app",
-    name: "Bisnisku",
-    description: "Template romantis untuk pasangan yang berbagi momen spesial mereka",
-    image: "/images/pb5.png",
-    category: "Acara",
-    tags: ["Pernikahan", "Acara", "Romantis"]
-  },
-  {
-    url: "https://personalbranding6.vercel.app",
-    name: "Retro",
-    description: "Solusi lengkap untuk startup dengan fitur produk dan tim yang modern",
-    image: "/images/pb6.png",
-    category: "Bisnis",
-    tags: ["Startup", "Teknologi", "Inovatif"]
-  },
-  {
-    url: "https://personalbranding7.vercel.app",
-    name: "Persona",
-    description: "Bagikan petualangan Anda dengan peta interaktif dan galeri perjalanan",
-    image: "/images/pb7.png",
-    category: "Travel",
-    tags: ["Petualangan", "Peta", "Travel"]
-  },
-  {
-    url: "https://personalbranding8.vercel.app",
-    name: "Matrix",
-    description: "Template dinamis untuk musisi dengan pemutar musik built-in yang elegan",
-    image: "/images/pb8.png",
-    category: "Musik",
-    tags: ["Musik", "Artis", "Audio"]
-  },
-  {
-    url: "https://personalbranding9.vercel.app",
-    name: "Cutie",
-    description: "Template energik untuk pelatih kebugaran dengan jadwal kelas online",
-    image: "/images/pb9.png",
-    category: "Kesehatan",
-    tags: ["Kebugaran", "Kesehatan", "Olahraga"]
-  },
-  {
-    url: "https://personalbranding10.vercel.app",
-    name: "Angkringan",
-    description: "Template hangat untuk kafe dengan menu digital dan sistem reservasi",
-    image: "/images/pb10.png",
-    category: "Kuliner",
-    tags: ["Makanan", "Minuman", "Kafe"]
-  },
-  {
-    url: "https://personalbranding11.vercel.app",
-    name: "Jajan",
-    description: "Galeri foto fullscreen dengan lightbox dan efek zoom yang memukau",
-    image: "/images/pb11.png",
-    category: "Fotografi",
-    tags: ["Foto", "Galeri", "Visual"]
-  },
-  {
-    url: "https://personalbranding12.vercel.app",
-    name: "SKT",
-    description: "Template ramah lingkungan dengan nuansa alam dan elemen organik",
-    image: "/images/pb12.png",
-    category: "Lifestyle",
-    tags: ["Alam", "Organik", "Hijau"]
-  }
 ];
