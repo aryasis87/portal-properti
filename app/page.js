@@ -1,21 +1,52 @@
 'use client';
+import { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Home, ArrowDown, ArrowUpRight, MessageCircle, KeyRound, Check } from 'lucide-react';
+import { Home, ArrowDown, ArrowUpRight, MessageCircle, KeyRound, Check, Search, LayoutList, ImageIcon, PhoneCall, Heart, Smartphone, ClipboardList, Hammer, ChevronDown } from 'lucide-react';
 import { templates } from './components/templates-data';
 
 const WA = 'https://wa.me/6281339908765?text=Halo%2C%20saya%20tertarik%20template%20marketplace%20properti%20di%20PortalProperti';
 
+const SPESIFIKASI = [
+  { icon: Search, title: 'Pencarian & Filter', desc: 'Cari berdasarkan lokasi, harga, tipe, dan luas — hasil instan tanpa reload.' },
+  { icon: LayoutList, title: 'Halaman Detail Listing', desc: 'Spesifikasi lengkap, harga, dan deskripsi yang tersusun rapi per properti.' },
+  { icon: ImageIcon, title: 'Galeri Properti', desc: 'Foto besar dan jernih — kesan pertama yang menjual sebelum survei.' },
+  { icon: PhoneCall, title: 'Kontak Agen Langsung', desc: 'Tombol WhatsApp di tiap listing; calon pembeli terhubung sekali ketuk.' },
+  { icon: Heart, title: 'Favorit & Bandingkan', desc: 'Pengunjung menyimpan pilihan dan membandingkan sebelum memutuskan.' },
+  { icon: Smartphone, title: 'Responsif Penuh', desc: 'Nyaman dijelajah dari ponsel — tempat 80% pencari properti berada.' },
+];
+
+const SERAH = [
+  { icon: ClipboardList, no: '01', title: 'Survei Kebutuhan', desc: 'Ceritakan bisnismu: agen, developer, atau listing pribadi.' },
+  { icon: Home, no: '02', title: 'Pilih Blok', desc: 'Tentukan wajah yang pas — editorial, proptech, luxury, atau hangat.' },
+  { icon: Hammer, no: '03', title: 'Renovasi', desc: 'Kami pasang logo, warna, dan data listing-mu ke dalam template.' },
+  { icon: KeyRound, no: '04', title: 'Serah Terima Kunci', desc: 'Website live + akses penuh jadi milikmu. Garansi tetap berjalan.' },
+];
+
+const TANYA = [
+  { q: 'Bisakah saya mengelola listing sendiri setelah jadi?', a: 'Bisa. Data listing tersimpan terstruktur dan mudah diubah — kami sertakan panduan menambah/mengubah properti. Kalau mau, kami juga bisa bantu kelola.' },
+  { q: 'Berapa banyak listing yang bisa ditampung?', a: 'Tidak ada batasan dari sisi template. Puluhan hingga ratusan listing tetap cepat karena halaman dibangun dengan Next.js yang ringan.' },
+  { q: 'Apakah cocok untuk agen perorangan, bukan perusahaan?', a: 'Sangat cocok. Template "hangat" dan "editorial" justru dirancang untuk kesan personal — pembeli merasa bicara dengan orang, bukan korporasi.' },
+  { q: 'Bagaimana calon pembeli menghubungi saya?', a: 'Setiap listing punya tombol WhatsApp/telepon yang mengarah langsung ke nomormu, lengkap dengan pesan otomatis berisi nama properti yang diminati.' },
+];
+
 export default function PortalProperti() {
+  const [buka, setBuka] = useState(0);
   return (
-    <div className="blueprint min-h-screen">
+    <div id="top" className="blueprint min-h-screen">
       {/* Navbar */}
       <header className="sticky top-0 z-40 border-b border-slatep/10 bg-kabut/90 backdrop-blur-xl">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5 sm:px-6">
-          <a href="/" className="flex items-center gap-2 text-lg font-extrabold tracking-tight">
+          <a href="#top" className="flex items-center gap-2 text-lg font-extrabold tracking-tight">
             <span className="grid h-9 w-9 place-items-center rounded-xl bg-slatep text-zamrud"><Home size={17} /></span>
             PortalProperti
           </a>
+          <div className="hidden items-center gap-6 text-sm font-bold text-mutedp md:flex" role="navigation" aria-label="Navigasi">
+            <a href="#koleksi" className="transition hover:text-zamrud">Perumahan</a>
+            <a href="#spesifikasi" className="transition hover:text-zamrud">Spesifikasi</a>
+            <a href="#serah" className="transition hover:text-zamrud">Serah Terima</a>
+            <a href="#tanya" className="transition hover:text-zamrud">FAQ</a>
+          </div>
           <a href={WA} target="_blank" rel="noopener noreferrer" className="rounded-full bg-zamrud px-5 py-2 text-sm font-extrabold text-white transition hover:bg-slatep">
             Konsultasi
           </a>
@@ -89,6 +120,91 @@ export default function PortalProperti() {
         </div>
       </section>
 
+      {/* Spesifikasi bangunan — fitur marketplace */}
+      <section id="spesifikasi" className="scroll-mt-24 border-t border-slatep/10 bg-white px-4 py-16 sm:px-6 lg:py-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center">
+            <p className="text-xs font-extrabold uppercase tracking-[0.25em] text-zamrud">Spesifikasi Bangunan</p>
+            <h2 className="mt-3 text-3xl font-extrabold sm:text-4xl">Semua unit <span className="text-zamrud">sudah termasuk</span></h2>
+            <p className="mx-auto mt-4 max-w-xl text-mutedp">Apapun wajah yang kamu pilih, fondasinya sama kokoh — fitur marketplace lengkap sejak hari pertama.</p>
+          </div>
+          <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {SPESIFIKASI.map((s, i) => (
+              <motion.div
+                key={s.title}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 0.45, delay: (i % 3) * 0.08 }}
+                className="rounded-2xl border border-slatep/10 bg-kabut p-6 transition hover:-translate-y-1 hover:shadow-lg"
+              >
+                <span className="grid h-11 w-11 place-items-center rounded-xl bg-slatep text-zamrud"><s.icon size={20} /></span>
+                <h3 className="mt-4 text-lg font-extrabold">{s.title}</h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-mutedp">{s.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Proses serah terima */}
+      <section id="serah" className="scroll-mt-24 px-4 py-16 sm:px-6 lg:py-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center">
+            <p className="text-xs font-extrabold uppercase tracking-[0.25em] text-zamrud">Proses</p>
+            <h2 className="mt-3 text-3xl font-extrabold sm:text-4xl">Empat langkah sampai <span className="text-zamrud">serah terima kunci</span></h2>
+          </div>
+          <div className="relative mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <span className="absolute left-0 right-0 top-7 hidden h-0.5 border-t-2 border-dashed border-zamrud/40 lg:block" aria-hidden="true" />
+            {SERAH.map((s, i) => (
+              <motion.div
+                key={s.no}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 0.45, delay: i * 0.1 }}
+                className="relative text-center"
+              >
+                <span className="relative z-10 mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-slatep text-zamrud shadow-lg"><s.icon size={22} /></span>
+                <p className="mt-3 text-xs font-extrabold uppercase tracking-widest text-zamrud">Langkah {s.no}</p>
+                <h3 className="mt-1 text-lg font-extrabold">{s.title}</h3>
+                <p className="mx-auto mt-1.5 max-w-[15rem] text-sm leading-relaxed text-mutedp">{s.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="tanya" className="scroll-mt-24 border-t border-slatep/10 bg-white px-4 py-16 sm:px-6 lg:py-20">
+        <div className="mx-auto max-w-3xl">
+          <div className="text-center">
+            <p className="text-xs font-extrabold uppercase tracking-[0.25em] text-zamrud">FAQ</p>
+            <h2 className="mt-3 text-3xl font-extrabold sm:text-4xl">Sebelum kamu <span className="text-zamrud">pindah masuk</span></h2>
+          </div>
+          <div className="mt-10 space-y-3">
+            {TANYA.map((t, i) => {
+              const open = buka === i;
+              return (
+                <div key={t.q} className={`rounded-2xl border bg-kabut transition ${open ? 'border-zamrud shadow-md' : 'border-slatep/10'}`}>
+                  <button onClick={() => setBuka(open ? -1 : i)} aria-expanded={open} className="flex w-full items-center justify-between gap-4 px-6 py-4 text-left">
+                    <span className="text-base font-extrabold leading-snug">{t.q}</span>
+                    <span className={`grid h-7 w-7 shrink-0 place-items-center rounded-full transition ${open ? 'rotate-180 bg-zamrud text-white' : 'bg-slatep/10 text-slatep'}`}>
+                      <ChevronDown size={15} />
+                    </span>
+                  </button>
+                  {open && (
+                    <div className="border-t border-slatep/10 px-6 py-4">
+                      <p className="text-sm leading-relaxed text-mutedp">{t.a}</p>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-slatep px-4 py-16 text-center text-white sm:px-6">
         <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }} className="mx-auto max-w-xl">
@@ -101,8 +217,35 @@ export default function PortalProperti() {
         </motion.div>
       </section>
 
-      <footer className="bg-slatep px-4 py-5 text-center text-xs text-white/40">
-        © {new Date().getFullYear()} PortalProperti · Sanzystore Dev — rumah untuk semua template.
+      <footer className="border-t border-white/10 bg-slatep px-4 pb-6 pt-10 text-white/60">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 text-center sm:grid-cols-3 sm:text-left">
+          <div>
+            <p className="flex items-center justify-center gap-2 text-lg font-extrabold text-white sm:justify-start">
+              <span className="grid h-8 w-8 place-items-center rounded-lg bg-zamrud text-white"><Home size={15} /></span>
+              PortalProperti
+            </p>
+            <p className="mt-2 text-sm leading-relaxed">Empat wajah marketplace properti — pilih yang paling menyerupai bisnismu.</p>
+          </div>
+          <nav aria-label="Tautan footer" className="text-sm">
+            <p className="text-xs font-extrabold uppercase tracking-widest text-zamrud">Jelajahi</p>
+            <ul className="mt-3 space-y-2">
+              <li><a href="#koleksi" className="transition hover:text-white">Kompleks Template</a></li>
+              <li><a href="#spesifikasi" className="transition hover:text-white">Spesifikasi</a></li>
+              <li><a href="#serah" className="transition hover:text-white">Proses Serah Terima</a></li>
+              <li><a href="#tanya" className="transition hover:text-white">FAQ</a></li>
+            </ul>
+          </nav>
+          <div className="text-sm">
+            <p className="text-xs font-extrabold uppercase tracking-widest text-zamrud">Hubungi</p>
+            <ul className="mt-3 space-y-2">
+              <li><a href={WA} target="_blank" rel="noopener noreferrer" className="transition hover:text-white">WhatsApp +62 813 3990 8765</a></li>
+              <li><a href="https://pintuweb.com" target="_blank" rel="noopener noreferrer" className="transition hover:text-white">pintuweb.com</a></li>
+            </ul>
+          </div>
+        </div>
+        <p className="mt-10 border-t border-white/10 pt-5 text-center text-xs text-white/40">
+          © {new Date().getFullYear()} PortalProperti · bagian dari PintuWeb — rumah untuk semua template.
+        </p>
       </footer>
     </div>
   );
