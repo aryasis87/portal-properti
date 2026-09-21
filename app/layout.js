@@ -3,10 +3,10 @@ import { Manrope } from 'next/font/google';
 
 const manrope = Manrope({ subsets: ['latin'], variable: '--font-manrope', weight: ['400', '600', '800'] });
 
-const __jsonld = {"@context":"https://schema.org","@type":"CollectionPage","name":"PortalProperti","description":"Koleksi 4 template marketplace properti","url":"https://properti.pintuweb.com","isPartOf":{"@type":"WebSite","name":"PintuWeb","url":"https://pintuweb.com"}};
+const __jsonld = {"@context":"https://schema.org","@type":"CollectionPage","name":"PortalProperti","description":"Koleksi 4 template marketplace properti","url":"https://portal-properti-nu.vercel.app","isPartOf":{"@type":"WebSite","name":"PintuWeb","url":"https://pintuweb.com"}};
 
 export const metadata = {
-  metadataBase: new URL("https://properti.pintuweb.com"),
+  metadataBase: new URL("https://portal-properti-nu.vercel.app"),
   title: "PortalProperti — Empat Wajah Marketplace Properti",
   description: "PortalProperti: 4 template marketplace properti dengan kepribadian berbeda — editorial, proptech, luxury, dan hangat.",
   applicationName: "PortalProperti",
@@ -14,11 +14,11 @@ export const metadata = {
   authors: [{ name: "PortalProperti" }],
   creator: "PortalProperti",
   publisher: "PortalProperti",
-  alternates: { canonical: "https://properti.pintuweb.com" },
+  alternates: { canonical: "https://portal-properti-nu.vercel.app" },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://properti.pintuweb.com",
+    url: "https://portal-properti-nu.vercel.app",
     siteName: "PortalProperti",
     title: "PortalProperti — Empat Wajah Marketplace Properti",
     description: "PortalProperti: 4 template marketplace properti dengan kepribadian berbeda — editorial, proptech, luxury, dan hangat.",

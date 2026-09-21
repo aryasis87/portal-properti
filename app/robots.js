@@ -1,7 +1,7 @@
 export default function robots() {
   return {
     rules: { userAgent: "*", allow: "/" },
-    sitemap: "https://properti.pintuweb.com/sitemap.xml",
-    host: "https://properti.pintuweb.com",
+    sitemap: "https://portal-properti-nu.vercel.app/sitemap.xml",
+    host: "https://portal-properti-nu.vercel.app",
   };
 }
