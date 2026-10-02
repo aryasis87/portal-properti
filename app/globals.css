@@ -6,8 +6,9 @@
 
   --color-slatep: #0e1729;
   --color-kabut: #eef1f6;
-  --color-zamrud: #10b981;
-  --color-mutedp: #64748b;
+  --color-zamrud: #047857;
+  --color-zamrud-terang: #34d399;
+  --color-mutedp: #526077;
 }
 
 html { scroll-behavior: smooth; }
@@ -24,7 +25,7 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.03em; }
 /* Kartu berbentuk rumah (atap segitiga) */
 .rumah { clip-path: polygon(50% 0, 100% 14%, 100% 100%, 0 100%, 0 14%); }
 .rumah-wrap { filter: drop-shadow(0 16px 30px rgba(14, 23, 41, 0.18)); transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), filter 0.3s; }
-.group:hover .rumah-wrap { transform: translateY(-8px); filter: drop-shadow(0 26px 40px rgba(16, 185, 129, 0.28)); }
+.group:hover .rumah-wrap { transform: translateY(-8px); filter: drop-shadow(0 26px 40px rgba(4, 120, 87, 0.28)); }
 
 /* Cerobong asap kecil */
 .cerobong { position: absolute; top: 1%; right: 22%; width: 10px; height: 9%; background: var(--color-slatep); border-radius: 2px 2px 0 0; }

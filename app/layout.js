@@ -3,12 +3,12 @@ import { Manrope } from 'next/font/google';
 
 const manrope = Manrope({ subsets: ['latin'], variable: '--font-manrope', weight: ['400', '600', '800'] });
 
-const __jsonld = {"@context":"https://schema.org","@type":"CollectionPage","name":"PortalProperti","description":"Koleksi 4 template marketplace properti","url":"https://portal-properti-nu.vercel.app","isPartOf":{"@type":"WebSite","name":"PintuWeb","url":"https://pintuweb.com"}};
+const __jsonld = {"@context":"https://schema.org","@type":"CollectionPage","name":"PortalProperti","description":"Koleksi 4 template marketplace properti: butik editorial, rumah pertama, hunian mewah, dan panduan kawasan","url":"https://portal-properti-nu.vercel.app","isPartOf":{"@type":"WebSite","name":"PintuWeb","url":"https://pintuweb.com"}};
 
 export const metadata = {
   metadataBase: new URL("https://portal-properti-nu.vercel.app"),
   title: "PortalProperti — Empat Wajah Marketplace Properti",
-  description: "PortalProperti: 4 template marketplace properti dengan kepribadian berbeda — editorial, proptech, luxury, dan hangat.",
+  description: "Empat template marketplace properti, masing-masing dengan halaman khas: kalkulator biaya beli, perbandingan listing, penyusun kunjungan privat, dan panduan kawasan.",
   applicationName: "PortalProperti",
   keywords: ["template marketplace properti", "website properti", "koleksi template properti"],
   authors: [{ name: "PortalProperti" }],
@@ -21,13 +21,13 @@ export const metadata = {
     url: "https://portal-properti-nu.vercel.app",
     siteName: "PortalProperti",
     title: "PortalProperti — Empat Wajah Marketplace Properti",
-    description: "PortalProperti: 4 template marketplace properti dengan kepribadian berbeda — editorial, proptech, luxury, dan hangat.",
+    description: "Empat template marketplace properti, masing-masing dengan halaman khas: kalkulator biaya beli, perbandingan listing, penyusun kunjungan privat, dan panduan kawasan.",
     images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "PortalProperti — Empat Wajah Marketplace Properti" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "PortalProperti — Empat Wajah Marketplace Properti",
-    description: "PortalProperti: 4 template marketplace properti dengan kepribadian berbeda — editorial, proptech, luxury, dan hangat.",
+    description: "Empat template marketplace properti, masing-masing dengan halaman khas: kalkulator biaya beli, perbandingan listing, penyusun kunjungan privat, dan panduan kawasan.",
     images: ["/og.jpg"],
   },
   robots: {
@@ -39,8 +39,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="id">
-      <body className={`${manrope.variable} antialiased`}>
+    <html lang="id" className={manrope.variable}>
+      <body className="antialiased">
         <main>{children}</main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(__jsonld) }} />
         </body>
