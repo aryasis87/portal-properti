@@ -3,7 +3,7 @@ import { Manrope } from 'next/font/google';
 
 const manrope = Manrope({ subsets: ['latin'], variable: '--font-manrope', weight: ['400', '600', '800'] });
 
-const __jsonld = {"@context":"https://schema.org","@type":"CollectionPage","name":"PortalProperti","description":"Koleksi 4 template marketplace properti: butik editorial, rumah pertama, hunian mewah, dan panduan kawasan","url":"https://portal-properti-nu.vercel.app","isPartOf":{"@type":"WebSite","name":"PintuWeb","url":"https://pintuweb.com"}};
+const __jsonld = {"@context":"https://schema.org","@type":"CollectionPage","name":"PortalProperti","description":"Koleksi 4 template marketplace properti: butik editorial, rumah pertama, hunian mewah, dan panduan kawasan","url":"https://portal-properti-nu.vercel.app","isPartOf":{"@type":"WebSite","name":"PintuWeb","url":"https://www.pintuweb.com"}};
 
 export const metadata = {
   metadataBase: new URL("https://portal-properti-nu.vercel.app"),
