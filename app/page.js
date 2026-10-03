@@ -98,8 +98,12 @@ export default function PortalProperti() {
                 </div>
               </a>
               <div className="mt-6 px-1">
-                <div className="flex items-baseline justify-between">
-                  <h2 className="text-2xl font-extrabold">{t.name}</h2>
+                <div className="flex items-center justify-between gap-3">
+                  <div className="flex flex-wrap items-center gap-3">
+                    <h2 className="text-2xl font-extrabold">{t.name}</h2>
+                    {/* Papan "terjual" ala agen properti */}
+                    {t.terjual > 0 && <span className="-rotate-3 rounded-sm border-2 border-slatep bg-white px-2 py-0.5 text-[11px] font-extrabold uppercase tracking-wide text-slatep shadow-[2px_2px_0_var(--color-zamrud)]">{t.terjual} terjual</span>}
+                  </div>
                   <span className="text-xs font-bold uppercase tracking-wide text-mutedp">Blok {String.fromCharCode(65 + i)}-0{i + 1}</span>
                 </div>
                 <p className="mt-2 leading-relaxed text-mutedp">{t.description}</p>
