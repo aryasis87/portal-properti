@@ -2,7 +2,7 @@
 
 PortalProperti: 4 template marketplace properti dengan kepribadian berbeda — editorial, proptech, luxury, dan hangat.
 
-**Demo live:** https://portal-properti-nu.vercel.app
+**Demo live:** https://www.pintuweb.com/website-properti
 
 ![Tangkapan layar PortalProperti](public/og.jpg)
 

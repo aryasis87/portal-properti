@@ -34,6 +34,14 @@ export default function PortalProperti() {
   const [buka, setBuka] = useState(0);
   return (
     <div id="top" className="blueprint min-h-screen">
+      {/* Jejak: portal ini bagian dari PintuWeb */}
+      <nav aria-label="Jejak" className="bg-slatep text-kabut text-xs">
+        <ol className="mx-auto flex max-w-6xl px-4 sm:px-6 items-center gap-2 py-1.5">
+          <li><a href="https://www.pintuweb.com" className="font-semibold underline-offset-4 hover:underline">PintuWeb</a></li>
+          <li aria-hidden="true" className="opacity-60">/</li>
+          <li aria-current="page">Website Properti</li>
+        </ol>
+      </nav>
       {/* Navbar */}
       <header className="sticky top-0 z-40 border-b border-slatep/10 bg-kabut/90 backdrop-blur-xl">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5 sm:px-6">
@@ -249,7 +257,7 @@ export default function PortalProperti() {
             <p className="text-xs font-extrabold uppercase tracking-widest text-zamrud-terang">Hubungi</p>
             <ul className="mt-3 space-y-2">
               <li><a href={WA} target="_blank" rel="noopener noreferrer" className="transition hover:text-white">WhatsApp +62 813 3990 8765</a></li>
-              <li><a href="https://www.pintuweb.com" target="_blank" rel="noopener noreferrer" className="transition hover:text-white">pintuweb.com</a></li>
+              <li><a href="https://www.pintuweb.com" className="transition hover:text-white">pintuweb.com</a></li>
             </ul>
           </div>
         </div>
