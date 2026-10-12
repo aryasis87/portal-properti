@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Home, ArrowDown, ArrowUpRight, MessageCircle, KeyRound, Check, Search, LayoutList, ImageIcon, CalendarCheck, Calculator, Smartphone, ClipboardList, Hammer, ChevronDown } from 'lucide-react';
 import { templates } from './components/templates-data';
 
-const WA = 'https://wa.me/6281339908765?text=Halo%2C%20saya%20tertarik%20template%20marketplace%20properti%20di%20PortalProperti';
+const WA = 'https://wa.me/6285190931399?text=Halo%2C%20saya%20tertarik%20template%20marketplace%20properti%20di%20PortalProperti';
 
 const SPESIFIKASI = [
   { icon: Search, title: 'Pencarian & filter', desc: 'Status, jenis, kota, kamar, dan harga — rentang beli dan sewa dipisah, sewa tahunan disetarakan per bulan.' },
@@ -25,7 +25,7 @@ const SERAH = [
 
 const TANYA = [
   { q: 'Bisakah saya mengelola listing sendiri setelah jadi?', a: 'Bisa. Data listing tersimpan terstruktur dan mudah diubah — kami sertakan panduan menambah/mengubah properti. Kalau mau, kami juga bisa bantu kelola.' },
-  { q: 'Berapa biaya membuat website properti seperti ini?', a: 'Website properti untuk satu agen atau developer Rp4 juta–Rp9 juta (2–3 minggu). Marketplace multi-agen dengan akun pemasang dan moderasi listing mulai Rp15 juta (4–8 minggu). Rinciannya ada di halaman paket PintuWeb.' },
+  { q: 'Berapa biaya membuat website properti seperti ini?', a: 'Website properti untuk satu agen atau developer Rp2 juta–Rp4,5 juta (2–3 minggu). Marketplace multi-agen dengan akun pemasang dan moderasi listing mulai Rp7,5 juta (4–8 minggu). Rinciannya ada di halaman paket PintuWeb.' },
   { q: 'Berapa banyak listing yang bisa ditampung?', a: 'Tidak ada batasan dari sisi template. Puluhan hingga ratusan listing tetap cepat karena halaman dibangun dengan Next.js yang ringan.' },
   { q: 'Apakah cocok untuk agen perorangan, bukan perusahaan?', a: 'Sangat cocok. Template "hangat" dan "editorial" justru dirancang untuk kesan personal — pembeli merasa bicara dengan orang, bukan korporasi.' },
   { q: 'Bagaimana calon pembeli menghubungi saya?', a: 'Di demo, setiap listing punya formulir jadwal survei yang hanya menampilkan ringkasan. Saat dipasang untuk bisnismu, formulir itu kami arahkan ke WhatsApp, email, atau sistem yang kamu pakai — lengkap dengan nama properti dan jadwal yang dipilih.' },
@@ -257,7 +257,7 @@ export default function PortalProperti() {
           <div className="text-sm">
             <p className="text-xs font-extrabold uppercase tracking-widest text-zamrud-terang">Hubungi</p>
             <ul className="mt-3 space-y-2">
-              <li><a href={WA} target="_blank" rel="noopener noreferrer" className="transition hover:text-white">WhatsApp +62 813 3990 8765</a></li>
+              <li><a href={WA} target="_blank" rel="noopener noreferrer" className="transition hover:text-white">WhatsApp +62 851 9093 1399</a></li>
               <li><a href="https://www.pintuweb.com" className="transition hover:text-white">pintuweb.com</a></li>
             </ul>
           </div>
