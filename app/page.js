@@ -25,7 +25,7 @@ const SERAH = [
 
 const TANYA = [
   { q: 'Bisakah saya mengelola listing sendiri setelah jadi?', a: 'Bisa. Data listing tersimpan terstruktur dan mudah diubah — kami sertakan panduan menambah/mengubah properti. Kalau mau, kami juga bisa bantu kelola.' },
-  { q: 'Berapa biaya membuat website properti seperti ini?', a: 'Website properti untuk satu agen atau developer Rp2 juta–Rp4,5 juta (2–3 minggu). Marketplace multi-agen dengan akun pemasang dan moderasi listing mulai Rp7,5 juta (4–8 minggu). Rinciannya ada di halaman paket PintuWeb.' },
+  { q: 'Berapa biaya membuat website properti seperti ini?', a: 'Website properti untuk satu agen atau developer Rp2 juta–Rp4,5 juta (5–8 hari kerja). Marketplace multi-agen dengan akun pemasang dan moderasi listing mulai Rp7,5 juta (2–4 minggu). Rinciannya ada di halaman paket PintuWeb.' },
   { q: 'Berapa banyak listing yang bisa ditampung?', a: 'Tidak ada batasan dari sisi template. Puluhan hingga ratusan listing tetap cepat karena halaman dibangun dengan Next.js yang ringan.' },
   { q: 'Apakah cocok untuk agen perorangan, bukan perusahaan?', a: 'Sangat cocok. Template "hangat" dan "editorial" justru dirancang untuk kesan personal — pembeli merasa bicara dengan orang, bukan korporasi.' },
   { q: 'Bagaimana calon pembeli menghubungi saya?', a: 'Di demo, setiap listing punya formulir jadwal survei yang hanya menampilkan ringkasan. Saat dipasang untuk bisnismu, formulir itu kami arahkan ke WhatsApp, email, atau sistem yang kamu pakai — lengkap dengan nama properti dan jadwal yang dipilih.' },
